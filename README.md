@@ -7,15 +7,16 @@ O algoritmo para multiplicação de dois valores inteiros X[1..n] e Y [1..n], de
 Implemente os algoritmos de multiplicação tradicional (do ensino fundamental) e de Karatsuba (apresentado a seguir). Seu programa deve receber dois inteiros X[1..n] e Y [1..n], devolver o produto X · Y , e mostrar o tempo de execução dos 2 algoritmos.
 Karatsuba (X, Y , n)
 
-1. se(n≤3)retornaX·Y
-2. q←⌈n2⌉
-3. A←X[q+1..n];B←X[1..q]
-4. C←Y[q+1..n];D←Y[1..q]
-5. E ← Karatsuba (A, C, ⌊n2 ⌋)
-6. F←Karatsuba(B,D,⌈n2⌉)
-7. G←Karatsuba(A+B,C+D,⌈n2⌉+1)
-8. H←G−F−E
-9. R←E×102⌈n2⌉ +H×10⌈n2⌉ +F
-10. retorna R
+```
+se(n≤3)retornaX·Y
+q←⌈n2⌉
+A←X[q+1..n];B←X[1..q]
+C←Y[q+1..n];D←Y[1..q]
+E ← Karatsuba (A, C, ⌊n2 ⌋)
+F←Karatsuba(B,D,⌈n2⌉)
+G←Karatsuba(A+B,C+D,⌈n2⌉+1)
+H←G−F−E
+R←E×102⌈n2⌉ +H×10⌈n2⌉ +F
+retorna R
 
 
